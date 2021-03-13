@@ -1,1 +1,56 @@
-tester
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+<body>
+<h1 style="color:#0099ff"> Which Is Your Favorite WILD Animal?</h1>
+
+<form>
+	<input type= "checkbox" id= "animalOne" name= "animalOne" value= "lion">
+		<label for ="animalOne"> Lion </label> <br>
+
+<input type= "checkbox" id= "animalTwo" name= "animalTwo" value= "zebra">
+		<label for ="animalTwo"> Zebra </label> <br>
+
+<input type= "checkbox" id= "animalThree" name= "animalThree" value= "elephant">
+		<label for ="animalThree"> Elephant </label> <br>
+
+<input type= "checkbox" id= "animalFour" name= "animalFour" value= "lion">
+		<label for ="animalFour"> Cobra </label> <br>
+
+<button id="submit" type="submit">Finished </button>
+
+</form>
+
+<!-- Java -->
+<script>
+	
+	function handleSubmit(event) {
+		event.preventDefault ();
+		alert ("Congrats!");
+	}
+
+	function changeColor(event) {
+		event.target.style.backgroundColor = "#0099ff";
+		event.target.style.color = "#cc0066";
+	}
+	function removeColor(event) {
+		event.target.style.backgroundColor = null;
+		event.target.style.color = null;
+	}
+
+	//Native Approach
+		const submitBut = document.getElementById ("submit");
+		submitBut.addEventListener ("mouseenter", changeColor);
+		submitBut.addEventListener ("mouseleave", removeColor);
+		submitBut.addEventListener ("click", handleSubmit);
+
+let animalOne= document.getElementById ("animalOne");
+  document.getElementById("animalOne").appendChild(input);
+
+
+</script>
+
+
+</body>
+</html>
